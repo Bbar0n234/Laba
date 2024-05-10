@@ -4,10 +4,10 @@ on: [push, pull_request]
 
 jobs:
   run-tests:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest, ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.9, 3.10]
+        python-version: [3.7, 3.8, 3.9, 3.10]
     steps:
       - name: Check out code
         uses: actions/checkout@v3
@@ -15,5 +15,5 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Запуск тестов
+      - name: Run tests
         run: python -m unittest tests.py
