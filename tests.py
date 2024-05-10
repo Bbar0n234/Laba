@@ -1,8 +1,5 @@
 from main import text_to_binary, binary_to_text, khafre_cipher, khafre_decipher
-
 from unittest import TestCase
-
-import random
 
 
 class MyTestCase(TestCase):
