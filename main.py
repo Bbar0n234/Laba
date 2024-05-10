@@ -195,6 +195,8 @@ def khafre_cipher(text_to_encrypt, key, rounds):
 
     print(f"\nEncrypted text: \n\t{encrypted_string}\n\n")
 
+    return encrypted_string
+
 
 def khafre_decryption(block, round=0):
     round_number = 7 - round
@@ -236,6 +238,8 @@ def khafre_decipher(text_to_decrypt, key, rounds):
     decrypted_string = bin_text_to_string(bin_text_to_decrypt)
 
     print(f"\n\nDecrypted text: \n\t{decrypted_string}\n\n")
+
+    return decrypted_string
 
 
 def main():
@@ -294,5 +298,4 @@ def main():
 
 
 if __name__ == "__main__":
-    print(len("d034d84f13955dde6e2ad389793ec9233639a24824de1dd15af4bca6da5d2e515eed0dd84220d465df00d8156703bf79eb42ace3eb21457e17cf6e18e7c7dbdafd37133439f564cd034d84f13955dde6e2ad389793ec92c1f7c869ff74acc9")*8)
-    # main()
+    main()
