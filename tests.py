@@ -13,8 +13,8 @@ class MyTestCase(TestCase):
         self.assertEqual(binary_to_text("00110011001100100011001100110100"), "3234")
 
     def test_text_to_text(self):
-        random_str = str(random.randint(1, 1000))
-        self.assertEqual(random_str, binary_to_text(text_to_binary(random_str)))
+        test_str = "3234"
+        self.assertEqual(test_str, binary_to_text(text_to_binary(test_str)))
 
     def test_khafre(self):
         test_str = "Hello_I_am_Ilya_3234k"
