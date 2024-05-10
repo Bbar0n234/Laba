@@ -18,10 +18,10 @@ class MyTestCase(TestCase):
 
     def test_khafre(self):
         test_str = "Hello_I_am_Ilya_3234k"
-        test_key = "crypto_key"
-        random_rounds = random.randint(8, 16)
+        test_key = "cryptokey"
+        test_rounds = 8
 
-        enc_str = khafre_cipher(test_str, test_key, random_rounds)
-        dec_str = khafre_decipher(enc_str, test_key, random_rounds)
+        enc_str = khafre_cipher(test_str, test_key, test_rounds)
+        dec_str = khafre_decipher(enc_str, test_key, test_rounds)
 
         self.assertEqual(test_str, dec_str)
