@@ -17,7 +17,7 @@ class MyTestCase(TestCase):
         self.assertEqual(random_str, binary_to_text(text_to_binary(random_str)))
 
     def test_khafre(self):
-        random_str = str(random.randint(1, 1000))
+        random_str = str(random.randint(1, 1000) )
         random_key = str(random.randint(1000, 100000))
         random_rounds = random.randint(8, 16)
 
