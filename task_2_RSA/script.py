@@ -3,8 +3,6 @@
 
 import random
 
-from tqdm import tqdm
-
 import itertools
 import string
 import time
@@ -90,9 +88,12 @@ k = 381161505336546621355963
 p = k ** 6 + 7 * k ** 4 - 40 * k ** 3 + 12 * k ** 2 - 114 * k + 31377
 q = k ** 5 - 8 * k ** 4 + 19 * k ** 3 - 312 * k ** 2 - 14 * k + 14011
 
-p = 3066579306771115597687355686076076758022522055618718889724892460135650967004290207979084075958166724079946365284607200141677587668800511275679
-q = 8045354170966133722859905033223225612067486934384038000035996890974945627950634715342603756391574516419577772753935749
-e = 65537
+new_n = p * q
+print(N - new_n)
+
+# p = 3066579306771115597687355686076076758022522055618718889724892460135650967004290207979084075958166724079946365284607200141677587668800511275679
+# q = 8045354170966133722859905033223225612067486934384038000035996890974945627950634715342603756391574516419577772753935749
+# e = 65537
 
 
 def egcd(a, b):
@@ -117,7 +118,7 @@ def calculate_d(p, q, e):
     return d
 
 
-d = calculate_d(p, q, e)
+# d = calculate_d(p, q, e)
 
 
 def decrypt_message(ciphertext, d, p, q):
@@ -126,6 +127,6 @@ def decrypt_message(ciphertext, d, p, q):
     return decrypted_message
 
 
-decrypted_message = decrypt_message(enc, d, p, q)
+# decrypted_message = decrypt_message(enc, d, p, q)
 
-print(int_to_string(decrypted_message))
+# print(int_to_string(decrypted_message))
