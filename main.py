@@ -305,3 +305,23 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+class DocsClass():
+    """
+    Тестовый класс для написания документации
+    """
+    def cipher(self, text, key, rounds):
+        """
+        Метод принимает на вход текст, ключ и количество раундов, возвращает пару из шифрованного-дешифрованного сообщения
+        :param text: текст для шифрования
+        :param key: ключ
+        :param rounds: количество раундов
+        return: возвращает пару из шифрованного-дешифрованного сообщения
+        """
+        enc_msg = khafre_cipher(text, key, rounds)
+        print(enc_msg)
+
+        dec_msg = khafre_decipher(enc_msg, key,rounds)
+        print(dec_msg)
+
+        return enc_msg, dec_msg
