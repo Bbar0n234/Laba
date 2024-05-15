@@ -36,3 +36,14 @@ class MyTestCase(TestCase):
         dec_str = khafre_decipher(enc_str, test_key, test_rounds)
 
         self.assertEqual(test_str, dec_str)
+
+
+class DocsClass():
+    def test_method(self, a, b):
+        """
+        :param a:
+        :param b:
+        :return:
+        """
+        new_value = a + b
+        return new_value
