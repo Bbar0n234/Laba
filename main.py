@@ -127,6 +127,17 @@ def hex_to_bin_text(hex_string):
     return bin_text
 
 
+'''
+    \brief Функция которая анализирует текст и ключ для шифрования
+    
+    \param [in] text_to_encrypt Исходный текст в буквенном формате
+    \param [in] key Ключ для шифрования в буквенном формате
+    \param [in] is_hex_input_value Флаг, который указывает в каком формате входное значение
+    
+    \return Список пар блоков по 32 бита, а также ключ в бинарном формате.
+    
+     \warning Не принимает отрицательные значения
+'''
 def analyse_entered_value(text_to_encrypt, key, is_hex_input_value=False):
     if not is_hex_input_value:
         bin_text = text_to_binary(text_to_encrypt)
